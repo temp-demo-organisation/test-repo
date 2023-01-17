@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-repo
+  labels: 
+    backstage.io/kubernetes-id: test-repo
+    component: test-repo
+  annotations:
+    github.com/project-slug: divyanshiGupta/test-repo
+    backstage.io/kubernetes-id: test-repo
+spec:
+  type: service
+  lifecycle: unknown
+  owner: default

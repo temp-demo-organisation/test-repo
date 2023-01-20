@@ -1,14 +1,21 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
-  name: test-repo
-  labels: 
-    backstage.io/kubernetes-id: test-repo
-    component: test-repo
-  annotations:
-    github.com/project-slug: divyanshiGupta/test-repo
-    backstage.io/kubernetes-id: test-repo
+  name: demo-api
 spec:
-  type: service
-  lifecycle: unknown
-  owner: default
+  type: openapi
+  lifecycle: production
+  owner: temp-team-a
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists

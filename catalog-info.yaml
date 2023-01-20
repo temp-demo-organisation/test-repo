@@ -2,6 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: demo-api
+  annotations:
+    github.com/project-slug: temp-demo-organisation/test-repo
 spec:
   type: openapi
   lifecycle: production

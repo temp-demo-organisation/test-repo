@@ -7,7 +7,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: user:divyanshigupta
+  owner: temp-team-a
   definition: |
     openapi: "3.0.0"
     info:
